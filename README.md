@@ -1,0 +1,1 @@
+O projeto se trata de um terminal simples simulando uma criação de conta no banco. Conforme requisitado na atividade, o programa pede um número de agência, de conta, nome e segundo nome do usuário e saldo presente na conta. Por fim, o programa encerra imprimindo todos os dados que foram digitados pelo usuário no terminal.
