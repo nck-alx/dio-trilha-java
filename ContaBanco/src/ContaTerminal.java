@@ -6,14 +6,25 @@ public class ContaTerminal {
         System.out.println("BEM VINDO AO BANCO WOODSTONE. \nPressione ENTER para criar sua conta");
         scanner.nextLine();
         System.out.print("Digite o código de sua agência: ");
-        var agencia = scanner.next(); //scanner identifica o número digitado e armazena na variável agencia
+        int agencia = scanner.nextInt(); //scanner identifica o número digitado e armazena na variável agencia
+        while (agencia>999 || agencia<=0 || agencia < 99) {
+            System.out.println("Informe uma agência válida!: ");
+            agencia = scanner.nextInt();
+        }
         
         System.out.print("Digite o número de sua conta: ");
-        var numero = scanner.nextInt(); //scanner identifica o número digitado e armazena na variável numero
+        int numero = scanner.nextInt(); //scanner identifica o número digitado e armazena na variável numero
+        while (numero>999 || numero<=0 || numero < 99) {
+            System.out.println("Informe um numero de conta válido!: ");
+            numero = scanner.nextInt();
         
         System.out.print("Digite seu primeiro e segundo nome: ");
         scanner.nextLine(); //consome o "enter" que sobrou
-        var nome = scanner.nextLine(); //scanner identifica o que foi digitado e armazena na variável nome
+        String nome = scanner.nextLine(); //scanner identifica o que foi digitado e armazena na variável nome
+        while (!nome.matches("[a-zA-Z\\s]+")){
+            System.out.println("Informe um nome válido!");
+            nome = scanner.nextLine();
+        }
 
         System.out.print("Insira o valor do seu saldo: ");
         var saldo = scanner.nextDouble(); //scanner identifica o numero digitado e armazena na variável saldo
@@ -23,4 +34,4 @@ public class ContaTerminal {
         scanner.close(); //fecha o scanner
 
     }
-}
+}}
